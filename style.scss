@@ -1,0 +1,67 @@
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+$orange: #bc6d34;
+$card-length: 350px;
+$border-radius: 40px;
+$icon-container-size: 40px;
+$transparent-background: rgba(white, 0.1);
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+h3 {
+   font-size: 1.75em;
+   margin-bottom: 0.5em;
+   margin-top: 1em;
+}
+
+.rating-content {
+   background-color: $very-dark-blue;
+   color: $white;
+   font-family: 'Overpass';
+   font-size: 15px;
+   display: flex;
+   justify-content: center;
+}
+
+.rating-state,
+.thank-you {
+   background-color: $dark-blue;
+   width: $card-length;
+   height: $card-length;
+   border-radius: $border-radius;
+   padding: 1.5em;
+}
+
+.rating-state {
+   &__star-container {
+      background-color: $transparent-background;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $icon-container-size;
+      height: $icon-container-size;
+      border-radius: $icon-container-size;
+   }
+}
+
+.thank-you {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   &__rate-selected-phrase {
+      background-color: $transparent-background;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      color: $orange;
+   }
+}
