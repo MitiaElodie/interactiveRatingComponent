@@ -16,12 +16,14 @@ for(let i = 0; i < numbers.length; i++){
 }
 
 submitBtn.addEventListener('click', function() {
-   // hide the choice card and show the thank you card
-   ratingStateDiv.style.display = 'none'
-   thankYouDiv.style.display = 'flex'
-
-   // add the chosen value to the element
-   chosenValueSpan.innerHTML = chosenValue
+   if(chosenValue !== -1 ) {
+      // hide the choice card and show the thank you card
+      ratingStateDiv.style.display = 'none'
+      thankYouDiv.style.display = 'flex'
+   
+      // add the chosen value to the element
+      chosenValueSpan.innerHTML = chosenValue
+   }
 })
 
 function removeAlreadySelectedClass() {
