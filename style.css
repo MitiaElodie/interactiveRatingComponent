@@ -10,6 +10,10 @@ h3 {
   margin-top: 1em;
 }
 
+p {
+  color: hsl(217deg, 12%, 63%);
+}
+
 .rating-content {
   background-color: hsl(216deg, 12%, 8%);
   color: hsl(0deg, 0%, 100%);
@@ -28,7 +32,7 @@ h3 {
   padding: 1.5em;
 }
 
-.rating-state__star-container {
+.rating-state__star-container, .rating-state__number {
   background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
@@ -36,6 +40,37 @@ h3 {
   width: 40px;
   height: 40px;
   border-radius: 40px;
+}
+.rating-state__number:hover {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(217deg, 12%, 63%);
+}
+.rating-state__number:active, .rating-state__number--selected {
+  color: hsl(0deg, 0%, 100%);
+  background-color: #fc7711;
+}
+.rating-state__choice-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.rating-state__submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: #fc7711;
+  letter-spacing: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  line-height: 15px;
+  cursor: pointer;
+}
+.rating-state__submit-btn:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: #fc7711;
 }
 
 .thank-you {

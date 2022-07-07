@@ -4,6 +4,7 @@ $medium-grey: hsl(216, 12%, 54%);
 $dark-blue: hsl(213, 19%, 18%);
 $very-dark-blue: hsl(216, 12%, 8%);
 $orange: #bc6d34;
+$light-orange: #fc7711;
 $card-length: 350px;
 $border-radius: 40px;
 $icon-container-size: 40px;
@@ -19,6 +20,10 @@ h3 {
    font-size: 1.75em;
    margin-bottom: 0.5em;
    margin-top: 1em;
+}
+
+p {
+   color: $light-grey;
 }
 
 .rating-content {
@@ -40,7 +45,8 @@ h3 {
 }
 
 .rating-state {
-   &__star-container {
+   &__star-container,
+   &__number {
       background-color: $transparent-background;
       display: flex;
       align-items: center;
@@ -48,6 +54,45 @@ h3 {
       width: $icon-container-size;
       height: $icon-container-size;
       border-radius: $icon-container-size;
+   }
+
+   &__number {
+      &:hover {
+         color: $white;
+         background-color: $light-grey;
+      }
+
+      &:active,
+      &--selected {
+         color: $white;
+         background-color: $light-orange;
+      }
+   }
+
+   &__choice-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      margin-bottom: 20px;
+   }
+
+   &__submit-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      background-color: $light-orange;
+      letter-spacing: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 30px;
+      line-height: 15px;
+      cursor: pointer;
+
+      &:hover {
+         background-color: $white;
+         color: $light-orange;
+      }
    }
 }
 
