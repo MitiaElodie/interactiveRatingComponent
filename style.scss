@@ -101,16 +101,31 @@ p {
    flex-direction: column;
    &__rate-selected-phrase {
       background-color: $transparent-background;
-      padding: 5px;
+      padding: 5px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 30px;
       color: $orange;
+      margin-top: 20px;
+   }
+
+   &__image-container,
+   &__rate-selected-phrase-container,
+   &__title-container,
+   &__details-container {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+   }
+
+   &__details-container {
+      padding-left: 10px;
+      padding-right: 10px;
    }
 }
 
-#choosenValue {
+#chosenValue {
    margin-left: 5px;
    margin-right: 5px;
 }

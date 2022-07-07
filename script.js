@@ -2,15 +2,15 @@ var numbers = document.getElementsByClassName('rating-state__number')
 var ratingStateDiv = document.getElementById('ratingState')
 var thankYouDiv = document.getElementById('thankYou')
 var submitBtn = document.getElementById('submitBtn')
-var choosenValueSpan = document.getElementById('choosenValue')
+var chosenValueSpan = document.getElementById('chosenValue')
 var classSelected = 'rating-state__number--selected'
-var choosenValue = -1
+var chosenValue = -1
 var maximumChoiceValue = 5
 
 for(let i = 0; i < numbers.length; i++){
    numbers[i].addEventListener('click', function(event) {
       removeAlreadySelectedClass()
-      choosenValue = parseInt(event.target.id)
+      chosenValue = parseInt(event.target.id)
       event.target.classList.add(classSelected)
    })
 }
@@ -20,8 +20,8 @@ submitBtn.addEventListener('click', function() {
    ratingStateDiv.style.display = 'none'
    thankYouDiv.style.display = 'flex'
 
-   // add the choosen value to the element
-   choosenValueSpan.innerHTML = choosenValue
+   // add the chosen value to the element
+   chosenValueSpan.innerHTML = chosenValue
 })
 
 function removeAlreadySelectedClass() {
