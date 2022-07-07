@@ -57,12 +57,11 @@ p {
    }
 
    &__number {
-      &:hover {
+      &:hover:not(.rating-state__number--selected) {
          color: $white;
          background-color: $light-grey;
       }
 
-      &:active,
       &--selected {
          color: $white;
          background-color: $light-orange;
@@ -97,7 +96,7 @@ p {
 }
 
 .thank-you {
-   display: flex;
+   display: none;
    justify-content: center;
    flex-direction: column;
    &__rate-selected-phrase {
@@ -109,4 +108,9 @@ p {
       border-radius: 30px;
       color: $orange;
    }
+}
+
+#choosenValue {
+   margin-left: 5px;
+   margin-right: 5px;
 }

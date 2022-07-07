@@ -41,11 +41,11 @@ p {
   height: 40px;
   border-radius: 40px;
 }
-.rating-state__number:hover {
+.rating-state__number:hover:not(.rating-state__number--selected) {
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(217deg, 12%, 63%);
 }
-.rating-state__number:active, .rating-state__number--selected {
+.rating-state__number--selected {
   color: hsl(0deg, 0%, 100%);
   background-color: #fc7711;
 }
@@ -74,7 +74,7 @@ p {
 }
 
 .thank-you {
-  display: flex;
+  display: none;
   justify-content: center;
   flex-direction: column;
 }
@@ -86,6 +86,11 @@ p {
   justify-content: center;
   border-radius: 30px;
   color: #bc6d34;
+}
+
+#choosenValue {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
