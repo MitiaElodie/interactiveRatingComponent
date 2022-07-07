@@ -25,7 +25,6 @@ Users should be able to:
 ### Screenshot
 
 ![](images/screen.jpg)
-![](images/thankYou.png)
 
 ## My process
 
