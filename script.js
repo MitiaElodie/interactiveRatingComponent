@@ -23,6 +23,8 @@ submitBtn.addEventListener('click', function() {
    
       // add the chosen value to the element
       chosenValueSpan.innerHTML = chosenValue
+   } else {
+      alert('Please choose a number')
    }
 })
 
